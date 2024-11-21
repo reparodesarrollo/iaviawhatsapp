@@ -1,0 +1,264 @@
+[
+  {
+    "ref": "1159ff2d-bf5f-472e-b6d3-d501993e586d",
+    "keyword": "27e33c3ed3d95bcce69e18317975612b",
+    "answer": "Abrir",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "706b7e6740b9e96ed8269d909578e451"
+  },
+  {
+    "ref": "ans_3ab222c3-2058-46ec-b6e3-abd30b5b502e",
+    "keyword": "key_e1c48f3a-65ad-468f-8f9a-944ceb991223",
+    "answer": "¿Podrías compartirme la fecha con el siguiente formato: 21/11/2024?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "b60e7cbe0689c061a26bfa927d3ebaec",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "e7216245-c274-41d7-ad3e-a4e3cc2bb6fa",
+    "keyword": "b60e7cbe0689c061a26bfa927d3ebaec",
+    "answer": "1",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  },
+  {
+    "ref": "831b8a02-7edd-4433-830d-68f10e3fa8ac",
+    "keyword": null,
+    "answer": "Muchas gracias.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "a67d5b197321232583add9b759e19c20"
+  },
+  {
+    "ref": "ans_3d333401-1818-41da-8107-1adf43d336d6",
+    "keyword": "ans_3ab222c3-2058-46ec-b6e3-abd30b5b502e",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "a226b5a82b77866da036b6cc29670dbe",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "a0a0c10c-1414-4055-b41d-c15168ed760d",
+    "keyword": "a226b5a82b77866da036b6cc29670dbe",
+    "answer": "Tramo",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "85046c5da8bfbf92c558abdc381e6b2c"
+  },
+  {
+    "ref": "ans_b375102d-1094-4f18-b838-c3d1037be5eb",
+    "keyword": "key_0dfcaa35-8f3e-4c5b-a1fc-41a5d411c539",
+    "answer": "Por favor, ingresa el tramo del viaje en el siguiente formato: Ej: Rafaela, Santa Fe a Córdoba, Córdoba",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "34053bfaee669bdc8d482155ddb4cd5e",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "86ba942a-5817-4d71-9f4a-025971f53ec4",
+    "keyword": "34053bfaee669bdc8d482155ddb4cd5e",
+    "answer": "2",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "2294c3d08b53a6effa5df696a15b9d30"
+  },
+  {
+    "ref": "307446b3-71bd-4834-83a0-e9d3fa973a61",
+    "keyword": null,
+    "answer": "Muchas gracias, que tengas un buen viaje.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "03b4cb219debd6dab50a6993a14aa760"
+  },
+  {
+    "ref": "e295ad52-8f9f-4922-9070-979e5e93ee28",
+    "keyword": "2294c3d08b53a6effa5df696a15b9d30",
+    "answer": "Combustible",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "4112083156d8ed44e00da69bc38e3551"
+  },
+  {
+    "ref": "ans_4ee6868e-ba48-4aab-865e-3cb186f0be7c",
+    "keyword": "key_6e9d816c-7e99-4de3-b039-8e89dbda5311",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "742deeb8bb33f04e80c9901efc572204",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "ans_39dc5c06-6d5f-4d68-95d8-64f0c530e894",
+    "keyword": "ans_4ee6868e-ba48-4aab-865e-3cb186f0be7c",
+    "answer": "Por favor, carga el comprobante para continuar.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "708125c73d6135798d1537efa1f02854",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "5c322ea9-6106-4f99-917f-063212a0c808",
+    "keyword": "708125c73d6135798d1537efa1f02854",
+    "answer": "_event_document__fc2582a5-6fd1-4799-b8ac-451efce91dcb",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "399a8897f00bcf940f78a70124b74eba"
+  },
+  {
+    "ref": "69a880aa-5174-474f-9ac4-d38c968b8d55",
+    "keyword": null,
+    "answer": "Tu archivo se ha guardado correctamente",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "ac70da909701dfafc9012e4c3bb568dc"
+  },
+  {
+    "ref": "16afb9a2-6b2b-4715-9f46-fc28a1e94b77",
+    "keyword": "399a8897f00bcf940f78a70124b74eba",
+    "answer": "Cerrar",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "f2d723c5b9ee5ba370a21f18310a5a0e"
+  },
+  {
+    "ref": "ans_60d5ee14-b654-4229-87d9-4e236051cb32",
+    "keyword": "key_103e4471-ffb7-4d9b-84cb-fc95666a8abb",
+    "answer": "Cerrando planilla de viatios",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "4087a731ece811c7e09c1a9f90adc7f6",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "5a888f18-c536-4169-a274-59f54ceb4c00",
+    "keyword": "4087a731ece811c7e09c1a9f90adc7f6",
+    "answer": "Planilla",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "47a00f8118176093b2f5b317242af6f1"
+  },
+  {
+    "ref": "0cf74118-082b-4deb-aef9-94109b48842e",
+    "keyword": null,
+    "answer": "Muchas gracias.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "a67d5b197321232583add9b759e19c20"
+  },
+  {
+    "ref": "ans_c7d95f0c-c3b2-4a8e-8afb-90a5ceb80513",
+    "keyword": "key_ce41dc68-192d-4324-8c44-6b1afdc08299",
+    "answer": "Aquí tienes la información de la planilla de viáticos:",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "21bc1de245b9da24eab04afe1b84b301",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "5a223a59-b2a0-4389-a18b-f35984fc1b49",
+    "keyword": null,
+    "answer": "Resumen de tus respuestas:\n\n*fecha:* 1\n*contacto:* 5493492419497\n*colaborador:* Agustín\n*tramo:* 2\n*secciones:* Combustible\n",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "1f9228aaf1cbbd70ae9bfed18b732b9c"
+  }
+]
