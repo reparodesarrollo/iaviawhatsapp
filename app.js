@@ -10,6 +10,7 @@ const {
 const QRPortalWeb = require('@bot-whatsapp/portal');
 const BaileysProvider = require('@bot-whatsapp/provider/baileys');
 const MockAdapter = require('@bot-whatsapp/database/json');
+const baileys = require('@whiskeysockets/baileys');
 
 //importaciones necesarias
 const axios = require('axios');
@@ -46,15 +47,7 @@ const flowVoice = addKeyword(EVENTS.VOICE_NOTE).addAnswer(
          'papelería',
          'remis',
          'cochera',
-         'comidas de equipos',
-         'comidas de negocios',
-         'móvil y viáticos',
-         'mantenimiento',
-         'aranceles',
-         'computación',
-         'capacitación',
-         'avión combustible',
-         'reparaciones avión',
+         'negocios',
       ];
 
       // Verifica si el mensaje contiene alguna de las secciones
@@ -142,15 +135,7 @@ const flowAyuda = addKeyword(['AYUDA', 'ayuda']).addAnswer([
    '📚 *PAPELERIA*',
    '🚖 *REMIS*',
    '🚗 *COCHERA*',
-   '🍴 *COMIDAS DE EQUIPOS*',
-   '🍽️ *COMIDAS DE NEGOCIOS*',
-   '📱 *MOVIL. Y VIAT.*',
-   '🔧 *MANTENIMIENTO*',
-   '💼 *ARANCELES*',
-   '💻 *COMPUTACION*',
-   '🎓 *CAPACITACION*',
-   '✈️ *AVION COMBUSTIBLE*',
-   '🛠️ *REPARACIONES AVION*',
+   '💼 *NEGOCIOS*',
    ' ',
 ]);
 
@@ -168,11 +153,37 @@ const flowAbrir = addKeyword(['abrir', 'ABRIR'])
          return await flowDynamic('Muchas gracias.');
       }
    )
-   .addAction(async (ctx, { state }) => {
-      const { fecha, contacto, colaborador } = await state.getMyState();
-      console.log('Fecha almacenada:', fecha);
-      console.log('Número de contacto:', contacto);
-      console.log('Colaborador:', colaborador);
+   .addAction(async (ctx, { flowDynamic, state }) => {
+      const { contacto, colaborador } = await state.getMyState();
+      const params = {
+         phone: contacto,
+         opc: 'ABRIR',
+      };
+
+      try {
+         // Llamado a la API
+         const response = await axios.post(
+            'https://www.itdepsis.com.ar/7d156b/pm/getiavia.htm',
+            null,
+            { params }
+         );
+         const validado = response.data[0].msgdat;
+         await state.update({ validado });
+         console.log(validado, 'desde state');
+
+         if (validado === 'true') {
+            return await flowDynamic([
+               colaborador,
+               '👋 Bienvenido 📝 planilla abierta',
+            ]);
+         } else {
+            return await flowDynamic(
+               '🚫 No dispone de permisos para continuar.'
+            );
+         }
+      } catch (error) {
+         console.error('Error al llamar a la API:', error.message);
+      }
    });
 
 //FLOW TRAMO (SOLICITA LOCALIDAD DESDE HASTA, EN FORMATO LOCALIDAD-PROVINCIA)
@@ -180,14 +191,96 @@ const flowTramo = addKeyword(['tramo', 'TRAMO']).addAnswer(
    'Por favor, ingresa el tramo del viaje en el siguiente formato: Ej: Rafaela, Santa Fe a Córdoba, Córdoba',
    { capture: true },
    async (ctx, { flowDynamic, state }) => {
-      const tramo = ctx.body;
-      await state.update({ tramo });
-      console.log('Tramo ingresado:', tramo);
-      return await flowDynamic('Muchas gracias, que tengas un buen viaje.');
+      const { validado } = await state.getMyState();
+
+      if (validado === 'true') {
+         const tramo = ctx.body;
+         await state.update({ tramo });
+         console.log('Tramo ingresado:', tramo);
+         return await flowDynamic('Muchas gracias, que tengas un buen viaje.');
+      } else {
+         return await flowDynamic('🚫 No dispone de permisos para continuar.');
+      }
    }
 );
 
 //FLOW NOMBRE SECCION (SOLICITA FOTO DE COMPROBANTE)
+// const flowNombreSeccion = addKeyword([
+//    'PEAJES',
+//    'TAXI',
+//    'ALOJAMIENTO',
+//    'REFRIGERIO',
+//    'COMBUSTIBLE',
+//    'TRASLADO',
+//    'TELEFONO',
+//    'PAPELERIA',
+//    'REMIS',
+//    'COCHERA',
+//    'NEGOCIOS',
+// ])
+//    .addAction(async (ctx, { state }) => {
+//       const seccionNueva = ctx.body;
+//       // Obtiene las secciones existentes del estado o inicializa un array vacío
+//       const seccionesGuardadas = (await state.get('secciones')) || [];
+//       // Verifica si la sección ya está guardada
+//       if (!seccionesGuardadas.includes(seccionNueva)) {
+//          seccionesGuardadas.push(seccionNueva);
+//          await state.update({ secciones: seccionesGuardadas });
+//       }
+//       console.log('Secciones guardadas:', seccionesGuardadas);
+//    })
+//    .addAnswer(
+//       'Por favor, carga el comprobante para continuar.',
+//       { capture: true },
+//       async (ctx, { flowDynamic, state }) => {
+//          const stateData = await state.getMyState();
+//          const user = stateData.colaborador;
+
+//          function getLastSection(stateData) {
+//             const secciones = stateData.secciones;
+//             if (Array.isArray(secciones) && secciones.length > 0) {
+//                return secciones[secciones.length - 1];
+//             }
+//             return null;
+//          }
+//          console.log('-->', ctx);
+//          const file = ctx.message.documentMessage;
+//          const from = ctx.from;
+//          const lastSection = getLastSection(stateData);
+
+//          if (!file) {
+//             return await flowDynamic(
+//                'No se ha recibido un archivo. Por favor, intenta nuevamente.'
+//             );
+//          }
+
+//          try {
+//             const fileUrl = file.url;
+//             const extension = file.fileName?.split('.').pop();
+//             const fileName = `${from}-${user}-${lastSection}-${matrandom(
+//                1,
+//                1000
+//             )}.${extension}`;
+
+//             const filePath = path.join(__dirname, 'comprobantes', fileName);
+
+//             // descarga con axios -->
+//             const response = await axios.get(fileUrl, {
+//                responseType: 'arraybuffer',
+//             });
+
+//             fs.writeFileSync(filePath, response.data);
+//             console.log('Archivo guardado en:', filePath);
+//             return await flowDynamic('Tu archivo se ha guardado correctamente');
+//          } catch (error) {
+//             console.error('Error al guardar el archivo:', error);
+//             return await flowDynamic(
+//                'Hubo un problema al guardar el archivo. Intenta nuevamente.'
+//             );
+//          }
+//       }
+//    );
+
 const flowNombreSeccion = addKeyword([
    'PEAJES',
    'TAXI',
@@ -199,21 +292,11 @@ const flowNombreSeccion = addKeyword([
    'PAPELERIA',
    'REMIS',
    'COCHERA',
-   'COMIDAS DE EQUIPOS',
-   'COMIDAS DE NEGOCIOS',
-   'MOVIL. Y VIAT.',
-   'MANTENIMIENTO',
-   'ARANCELES',
-   'COMPUTACION',
-   'CAPACITACION',
-   'AVION COMBUSTIBLE',
-   'REPARACIONES AVION',
+   'NEGOCIOS',
 ])
    .addAction(async (ctx, { state }) => {
       const seccionNueva = ctx.body;
-      // Obtiene las secciones existentes del estado o inicializa un array vacío
       const seccionesGuardadas = (await state.get('secciones')) || [];
-      // Verifica si la sección ya está guardada
       if (!seccionesGuardadas.includes(seccionNueva)) {
          seccionesGuardadas.push(seccionNueva);
          await state.update({ secciones: seccionesGuardadas });
@@ -221,52 +304,56 @@ const flowNombreSeccion = addKeyword([
       console.log('Secciones guardadas:', seccionesGuardadas);
    })
    .addAnswer(
-      'Por favor, carga el comprobante para continuar.',
+      'Por favor, carga el comprobante desde tu galería, adjúntalo como documento o toma una foto para continuar.',
       { capture: true },
-      async (ctx, { flowDynamic, state }) => {
-         const stateData = await state.getMyState();
-         const user = stateData.colaborador;
-
-         function getLastSection(stateData) {
-            const secciones = stateData.secciones;
-            if (Array.isArray(secciones) && secciones.length > 0) {
-               return secciones[secciones.length - 1];
-            }
-            return null;
-         }
-
-         const file = ctx.message.documentMessage;
-         const from = ctx.from;
-         const lastSection = getLastSection(stateData);
-
-         if (!file) {
-            return await flowDynamic(
-               'No se ha recibido un archivo. Por favor, intenta nuevamente.'
-            );
-         }
-
+      async (ctx, { flowDynamic, provider, state }) => {
+         const { contacto } = await state.getMyState();
+         console.log(contacto);
          try {
-            const fileUrl = file.url;
-            const extension = file.fileName?.split('.').pop();
-            const fileName = `${from}-${user}-${lastSection}-${matrandom(
-               1,
-               1000
-            )}.${extension}`;
+            const imageMessage = ctx.message?.imageMessage;
+            const documentMessage = ctx.message?.documentMessage;
 
+            if (!imageMessage && !documentMessage) {
+               console.log('No se detectó un archivo en el mensaje');
+               return await flowDynamic(
+                  'No se detectó un archivo válido en el mensaje. Por favor, intenta nuevamente adjuntando una imagen o documento.'
+               );
+            }
+
+            console.log('MediaMessage:', imageMessage || documentMessage);
+
+            // Descargar el archivo usando el mensaje adecuado
+            const buffer = await baileys.downloadMediaMessage(
+               ctx, // Pasar el mensaje completo
+               'buffer', // Descargar como buffer
+               {
+                  logger: provider.logger,
+                  reuploadRequest: provider.updateMediaMessage,
+               } // Opciones adicionales
+            );
+
+            // Validar que el archivo no esté vacío
+            if (!buffer || buffer.length === 0) {
+               throw new Error('El archivo descargado está vacío.');
+            }
+
+            // Obtener la extensión y nombre del archivo
+            const mimetype = imageMessage
+               ? imageMessage.mimetype
+               : documentMessage.mimetype;
+            const extension = mimetype.split('/')[1]; // Obtener la extensión
+            const fileName = `file_${contacto}_${Date.now()}.${extension}`;
             const filePath = path.join(__dirname, 'comprobantes', fileName);
+            fs.writeFileSync(filePath, buffer);
 
-            // descarga con axios -->
-            const response = await axios.get(fileUrl, {
-               responseType: 'arraybuffer',
-            });
-
-            fs.writeFileSync(filePath, response.data);
             console.log('Archivo guardado en:', filePath);
-            return await flowDynamic('Tu archivo se ha guardado correctamente');
-         } catch (error) {
-            console.error('Error al guardar el archivo:', error);
             return await flowDynamic(
-               'Hubo un problema al guardar el archivo. Intenta nuevamente.'
+               'Tu archivo se ha guardado correctamente.'
+            );
+         } catch (error) {
+            console.error('Error al procesar el archivo:', error.message);
+            return await flowDynamic(
+               'Hubo un problema al procesar el archivo. Por favor, intenta nuevamente.'
             );
          }
       }
@@ -288,14 +375,35 @@ const flowObservaciones = addKeyword([
 );
 
 //FLOW CERRAR
-const flowCerrar = addKeyword(['cerrar', 'CERRAR']).addAnswer(
-   'Cerrando planilla de viatios',
-   { capture: true },
-   async (ctx, { flowDynamic }) => {
-      console.log('Cerrar:', ctx.body);
-      return await flowDynamic('Muchas gracias.');
-   }
-);
+const flowCerrar = addKeyword(['cerrar', 'CERRAR'])
+   .addAnswer('Cerrando planilla de viaticos')
+   .addAction(async (ctx, { state }) => {
+      const userState = await state.getMyState();
+
+      const params = {
+         phone: userState.contacto,
+         data: JSON.stringify(userState),
+         opc: 'CERRAR',
+      };
+
+      try {
+         const response = await axios.post(
+            'https://www.itdepsis.com.ar/7d156b/pm/getiavia.htm',
+            null,
+            { params }
+         );
+
+         console.log(response.data, 'data');
+
+         if (response.status === 200) {
+            console.log('Respuesta exitosa:', response.data);
+         } else {
+            console.log('Error en la respuesta:', response.status);
+         }
+      } catch (error) {
+         console.error('Error al llamar a la API:', error.message);
+      }
+   });
 
 //FLOW PLANTILLA
 const flowPlanilla = addKeyword(['planilla', 'PLANILLA']).addAnswer(
