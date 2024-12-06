@@ -441,57 +441,65 @@ const flowPlanilla = addKeyword(['planilla', 'PLANILLA'])
 
       const userState = await state.getMyState();
 
-      let stateResponseMessage = 'Resumen de tu planilla:\n\n';
-      for (const [key, value] of Object.entries(userState)) {
-         if (key !== 'validado' && key !== 'nomSecc') {
-            const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
-            stateResponseMessage += `*${formattedKey}:* ${value}\n`;
+      if (!userState || Object.keys(userState).length === 0) {
+         // Si no hay datos en userState
+         await flowDynamic('Planilla cerrada, no tienes datos para ver.');
+      } else {
+         // Si hay datos, construye el mensaje
+         let stateResponseMessage = 'Planilla resumen:\n\n';
+         for (const [key, value] of Object.entries(userState)) {
+            // Omitir las claves 'validado' y 'nomSecc'
+            if (key !== 'validado' && key !== 'nomSecc') {
+               // Convertir la primera letra de la clave en mayúscula
+               const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+               stateResponseMessage += `*${formattedKey}:* ${value}\n`;
+            }
          }
-      }
 
-      // Envía el resumen al usuario
-      await flowDynamic(stateResponseMessage);
+         // Envía el resumen al usuario
+         await flowDynamic(stateResponseMessage);
 
-      try {
-         const params = {
-            phone: contacto,
-            opc,
-         };
+         try {
+            const params = {
+               phone: contacto,
+               opc,
+            };
 
-         const response = await axios.post(
-            'https://www.itdepsis.com.ar/7d156b/pm/getiavia.htm',
-            null,
-            { params }
-         );
+            const response = await axios.post(
+               'https://www.itdepsis.com.ar/7d156b/pm/getiavia.htm',
+               null,
+               { params }
+            );
 
-         console.log('Datos recibidos:', response.data);
+            console.log('Datos recibidos:', response.data);
 
-         // Formatear los datos en un mensaje para el usuario
-         if (response.data.length > 0) {
-            let responseMessage = 'Resumen comprobantes cargados:\n\n';
+            // Formatear los datos en un mensaje para el usuario
+            if (response.data.length > 0) {
+               let responseMessage = 'Resumen comprobantes cargados:\n\n';
 
-            response.data.forEach((item, index) => {
-               responseMessage += `*Comprobante ${index + 1}*\n`;
-               responseMessage += `${item.o_nom.replace(/['"]+/g, '')}\n`;
-               responseMessage += `${item.o_cui.replace(/['"]+/g, '')}\n`;
-               responseMessage += `${item.o_tot.replace(/['"]+/g, '')}\n`;
-               responseMessage += '\n';
-            });
+               response.data.forEach((item, index) => {
+                  responseMessage += `*Comprobante ${index + 1}*\n`;
+                  responseMessage += `${item.o_nom.replace(/['"]+/g, '')}\n`;
+                  responseMessage += `${item.o_cui.replace(/['"]+/g, '')}\n`;
+                  responseMessage += `${item.o_tot.replace(/['"]+/g, '')}\n`;
+                  responseMessage += '\n';
+               });
 
-            await flowDynamic(responseMessage);
-         } else {
+               await flowDynamic(responseMessage);
+            } else {
+               await flowDynamic(
+                  'No se encontraron registros en la planilla de viáticos.'
+               );
+            }
+         } catch (error) {
+            console.error(
+               'Error al obtener los datos de la planilla:',
+               error.message
+            );
             await flowDynamic(
-               'No se encontraron registros en la planilla de viáticos.'
+               'Hubo un problema al obtener los datos de tu planilla. Por favor, intenta nuevamente más tarde.'
             );
          }
-      } catch (error) {
-         console.error(
-            'Error al obtener los datos de la planilla:',
-            error.message
-         );
-         await flowDynamic(
-            'Hubo un problema al obtener los datos de tu planilla. Por favor, intenta nuevamente más tarde.'
-         );
       }
    });
 

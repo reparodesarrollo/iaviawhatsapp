@@ -1,0 +1,480 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: '6ED795776CB32ED7293B9ED6E28AE042',
+    participant: undefined
+  },
+  messageTimestamp: 1733496265,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Planilla',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Planilla',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f255634b-9109-44f1-a038-5f292818281c',
+  keyword: 'key_f697627b-b33b-4f75-b9cb-6ee20e056558',
+  answer: 'Aquí tienes la información de la planilla de viáticos:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f525f366ba5f81a13f8da78c4f31e68c'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fd006ed9-bac6-4623-a6e8-e7b7f9aa12ce',
+  keyword: 'ans_f255634b-9109-44f1-a038-5f292818281c',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '405cc0c53c6f197d6373ab8aa226b796'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: 'B8E01C4A517D8883E4F639584F8D8619',
+    participant: undefined
+  },
+  messageTimestamp: 1733496272,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Abrir',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Abrir',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_e9ea3480-375f-4118-8c02-1b972d1a565a',
+  keyword: 'key_0ffc23fe-ea52-42e3-9546-7e1d376fc036',
+  answer: '¿Podrías compartirme la fecha con el siguiente formato: 06/12/2024?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '487a5f5c28a583a9632220bc92ae343e'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: 'A2743AC891B891A243D657155E6D8340',
+    participant: undefined
+  },
+  messageTimestamp: 1733496282,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: '06/12/2024',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '06/12/2024',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6ed04795-47c9-42d4-84ef-4e9da36ec661',
+  keyword: 'ans_e9ea3480-375f-4118-8c02-1b972d1a565a',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '013ba2559893b56ab4cbb7aa53d1f21f'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: 'ADF3D8C1FF8CF6409B4BFF5A6C5CE09B',
+    participant: undefined
+  },
+  messageTimestamp: 1733496285,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Tramo',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Tramo',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_d9f167a9-0a5b-4c44-8afc-5ec0820a57a3',
+  keyword: 'key_8de65f39-4222-48c8-8c99-04957cc60c3f',
+  answer: 'Por favor, ingresa el tramo del viaje en el siguiente formato: Ej: Rafaela, Santa Fe a Córdoba, Córdoba',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '09e02037c0df7eae30baaa87440b8934'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: '17CF6B0F2F9DF76CD65A2502EB9B0ADF',
+    participant: undefined
+  },
+  messageTimestamp: 1733496289,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Rafaela, Santa Fe a Córdoba, Córdoba',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Rafaela, Santa Fe a Córdoba, Córdoba',
+  from: '5493492419497'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: 'F51B04AF2D7D2DD43AC62E270C3059C9',
+    participant: undefined
+  },
+  messageTimestamp: 1733496299,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Peajes',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Peajes',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f3a6d5af-7d7b-4bc9-a27d-4061ae4e913c',
+  keyword: 'key_8d504fe8-dabc-4c35-a3c3-1420b0eb77c6',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b8688479a9065dfad873ca9ee0716eef'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5efb65e0-0faf-40df-9ac1-96c369eed0f5',
+  keyword: 'ans_f3a6d5af-7d7b-4bc9-a27d-4061ae4e913c',
+  answer: 'Por favor, carga el comprobante desde tu galería, adjúntalo como documento o toma una foto para continuar.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b7812a6aeab15d4e02566e016f50492a'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: '20CC7769A87EE305DD00E16BB4967C72',
+    participant: undefined
+  },
+  messageTimestamp: 1733496313,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    imageMessage: ImageMessage {
+      interactiveAnnotations: [],
+      scanLengths: [],
+      url: 'https://mmg.whatsapp.net/o1/v/t62.7118-24/f1/m269/up-oil-image-28167022-f2ba-471c-ac38-fc3deada7cd6?ccb=9-4&oh=01_Q5AaICAnmt6dcKGbP2DgoeB2w6G1D3TTTxArvPsjbBbozYJ6&oe=677A504D&_nc_sid=e6ed6c&mms3=true',
+      mimetype: 'image/jpeg',
+      fileSha256: [Uint8Array],
+      fileLength: [Long],
+      height: 1600,
+      width: 720,
+      mediaKey: [Uint8Array],
+      fileEncSha256: [Uint8Array],
+      directPath: '/o1/v/t62.7118-24/f1/m269/up-oil-image-28167022-f2ba-471c-ac38-fc3deada7cd6?ccb=9-4&oh=01_Q5AaICAnmt6dcKGbP2DgoeB2w6G1D3TTTxArvPsjbBbozYJ6&oe=677A504D&_nc_sid=e6ed6c&_nc_hot=1733496312',
+      mediaKeyTimestamp: [Long],
+      jpegThumbnail: [Uint8Array],
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '_event_media__5daa618f-e780-41a7-8c29-245393e0ea55',
+  from: '5493492419497'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: '119D0E9CB3E8C1D85DD507EA976C5432',
+    participant: undefined
+  },
+  messageTimestamp: 1733496322,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Planilla',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Planilla',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f255634b-9109-44f1-a038-5f292818281c',
+  keyword: 'key_f697627b-b33b-4f75-b9cb-6ee20e056558',
+  answer: 'Aquí tienes la información de la planilla de viáticos:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f525f366ba5f81a13f8da78c4f31e68c'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fd006ed9-bac6-4623-a6e8-e7b7f9aa12ce',
+  keyword: 'ans_f255634b-9109-44f1-a038-5f292818281c',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '405cc0c53c6f197d6373ab8aa226b796'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: '707C08752CEB4734B48D3C30B1B568E8',
+    participant: undefined
+  },
+  messageTimestamp: 1733496332,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Cerrar',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Cerrar',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_131a6e59-92cc-40c7-8fee-64f72d6eb7b7',
+  keyword: 'key_7846390f-dfa6-489f-8d05-80688a3e9729',
+  answer: '¿Cierro la planilla de viáticos? Confirmame con un sí o no',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'bcc38ef45d1b8d12b6679e000e7c6822'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: '3AFE9934DE3096D5098967CC7F7055A7',
+    participant: undefined
+  },
+  messageTimestamp: 1733496335,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Si',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_a06fdf57-0667-4415-ba5a-dbc1b5ce5a09',
+  keyword: 'ans_131a6e59-92cc-40c7-8fee-64f72d6eb7b7',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '35d1fc83f4a480c3f0fa04bbaef5b5d8'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492419497@s.whatsapp.net',
+    fromMe: false,
+    id: 'FEB71D3E63468B461DE54A6A20EC6F52',
+    participant: undefined
+  },
+  messageTimestamp: 1733496345,
+  pushName: 'Agustín',
+  broadcast: false,
+  message: Message {
+    conversation: 'Planilla',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Planilla',
+  from: '5493492419497'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f255634b-9109-44f1-a038-5f292818281c',
+  keyword: 'key_f697627b-b33b-4f75-b9cb-6ee20e056558',
+  answer: 'Aquí tienes la información de la planilla de viáticos:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f525f366ba5f81a13f8da78c4f31e68c'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_fd006ed9-bac6-4623-a6e8-e7b7f9aa12ce',
+  keyword: 'ans_f255634b-9109-44f1-a038-5f292818281c',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '405cc0c53c6f197d6373ab8aa226b796'
+}

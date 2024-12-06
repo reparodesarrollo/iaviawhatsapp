@@ -1,356 +1,15 @@
 [
   {
-    "ref": "a7ed3683-9375-4785-975b-5d8e551e95e9",
-    "keyword": "9a9f41c907a436567975ff74dbf3f82e",
-    "answer": "Abrir",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "706b7e6740b9e96ed8269d909578e451"
-  },
-  {
-    "ref": "ans_fce7fa28-b8d5-4a60-9574-c48856e8de91",
-    "keyword": "key_f619b1c5-7d33-4bf0-984e-4998b7da4212",
-    "answer": "¿Podrías compartirme la fecha con el siguiente formato: 06/12/2024?",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "cbbff2b7b6405370ce5a4259430981ff",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "63d668e4-6e42-4093-be07-b3b6640e9dd1",
-    "keyword": "cbbff2b7b6405370ce5a4259430981ff",
-    "answer": "Abrir",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "706b7e6740b9e96ed8269d909578e451"
-  },
-  {
-    "ref": "612686ba-cecd-43d8-a9f1-81a8f235275b",
-    "keyword": null,
-    "answer": "Muchas gracias.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "a67d5b197321232583add9b759e19c20"
-  },
-  {
-    "ref": "ans_3944c313-6996-4687-8407-94aeb28590df",
-    "keyword": "ans_fce7fa28-b8d5-4a60-9574-c48856e8de91",
-    "answer": "__call_action__",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "8c30fbe60b699867daeb909701ee593b",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "55ee4dc8-b75f-499e-8425-58933382c196",
-    "keyword": null,
-    "answer": "Agustín",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "b22f217637a7d8196f85f1a330f9bfc6"
-  },
-  {
-    "ref": "edf0b33f-7816-43f9-bd18-6242bb4e688f",
-    "keyword": null,
-    "answer": "👋 Bienvenido 📝 planilla abierta",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "fe4fa924b75742e7a00c46c7b1fe4326"
-  },
-  {
-    "ref": "ans_fce7fa28-b8d5-4a60-9574-c48856e8de91",
-    "keyword": "key_f619b1c5-7d33-4bf0-984e-4998b7da4212",
-    "answer": "¿Podrías compartirme la fecha con el siguiente formato: 06/12/2024?",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "cbbff2b7b6405370ce5a4259430981ff",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "e6c0ff8b-76c2-4a25-b00d-1c01e6a7f742",
-    "keyword": "cbbff2b7b6405370ce5a4259430981ff",
-    "answer": "06/12/2024",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "d317ece4ac35809d81c77bed81b0a844"
-  },
-  {
-    "ref": "e04828a5-ce27-434c-b86f-5ecab3afa5ee",
-    "keyword": null,
-    "answer": "Muchas gracias.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "a67d5b197321232583add9b759e19c20"
-  },
-  {
-    "ref": "ans_3944c313-6996-4687-8407-94aeb28590df",
-    "keyword": "ans_fce7fa28-b8d5-4a60-9574-c48856e8de91",
-    "answer": "__call_action__",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "8c30fbe60b699867daeb909701ee593b",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "340c20d6-d49e-42e2-bafc-5dac6b691ad0",
-    "keyword": null,
-    "answer": "Agustín",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "b22f217637a7d8196f85f1a330f9bfc6"
-  },
-  {
-    "ref": "a673c8ed-562f-4713-871b-68c778b9bcba",
-    "keyword": null,
-    "answer": "👋 Bienvenido 📝 planilla abierta",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "fe4fa924b75742e7a00c46c7b1fe4326"
-  },
-  {
-    "ref": "5b768f01-2b60-4dd3-8555-5738cf0e57fc",
-    "keyword": "8c30fbe60b699867daeb909701ee593b",
-    "answer": "Tramo",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "85046c5da8bfbf92c558abdc381e6b2c"
-  },
-  {
-    "ref": "ans_64e9480f-d9a8-4a4c-8a8f-b440f10d73ae",
-    "keyword": "key_de36ea50-86c5-45b4-a063-95c65f890c16",
-    "answer": "Por favor, ingresa el tramo del viaje en el siguiente formato: Ej: Rafaela, Santa Fe a Córdoba, Córdoba",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "9d1472aded80e1b1e822a2891cc27b74",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "af4a5326-e89e-417b-bc6b-ea6f285644c7",
-    "keyword": "9d1472aded80e1b1e822a2891cc27b74",
-    "answer": "Rafaela, Santa Fe a Córdoba, Córdoba",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "1b889c99748c20c50f7dbfc06b4cc12c"
-  },
-  {
-    "ref": "d730973f-6235-4273-94fd-149f759f833c",
-    "keyword": null,
-    "answer": "Muchas gracias, que tengas un buen viaje.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "03b4cb219debd6dab50a6993a14aa760"
-  },
-  {
-    "ref": "5df76057-5fc8-4f50-b0af-49f46dbd802c",
-    "keyword": "1b889c99748c20c50f7dbfc06b4cc12c",
-    "answer": "Peajes",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "b809ac4f93aebb043dd5de628db1d807"
-  },
-  {
-    "ref": "ans_6c746cf4-480b-4d8f-8696-118a39ee8c8d",
-    "keyword": "key_29babab5-4b2f-40a6-8d07-257767efe822",
-    "answer": "__call_action__",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "a0336a2aeeba30db09dbcf2f2d9b75ff",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "ans_7e4334fa-f658-4259-9a5a-a0f56ed0d3d7",
-    "keyword": "ans_6c746cf4-480b-4d8f-8696-118a39ee8c8d",
-    "answer": "Por favor, carga el comprobante desde tu galería, adjúntalo como documento o toma una foto para continuar.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "1ca698bfcb39113cd5b7e3465060709a",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "f8f1aba9-1943-411d-842c-36637d8bdb8a",
-    "keyword": "1ca698bfcb39113cd5b7e3465060709a",
-    "answer": "_event_media__50ebfbf2-223e-4c8d-8e26-3ea0fb270b63",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "9ad54f4fa6793f5eff8fd9bcdffc4006"
-  },
-  {
-    "ref": "6b33f04a-a460-4fd8-8571-57b77f460db8",
-    "keyword": null,
-    "answer": "Tu archivo se ha guardado correctamente.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "4aeeddb1792753ab8ee59bacb39d30a2"
-  },
-  {
-    "ref": "fd5e0c4b-6b65-4538-aec2-a3f93c88b983",
-    "keyword": "9ad54f4fa6793f5eff8fd9bcdffc4006",
-    "answer": "Observaciones",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "3fb432897074ecaf3c4e09b894bdd4b5"
-  },
-  {
-    "ref": "ans_ba59c6f0-9912-4b42-a0fc-5d147361d22d",
-    "keyword": "key_1c887076-45da-4d98-9a48-9116cfe1ef0b",
-    "answer": "¿Tienes alguna observación o comentario?",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": true,
-      "child": null,
-      "delay": 0,
-      "idle": null,
-      "ref": null,
-      "nested": [],
-      "keyword": {},
-      "callback": true
-    },
-    "refSerialize": "5fb6101241f0b2a4b3e64c75127b7ba4",
-    "from": "5493492419497"
-  },
-  {
-    "ref": "8eaa5d23-d33e-4469-bbb3-df9eaf9e9ae6",
-    "keyword": "5fb6101241f0b2a4b3e64c75127b7ba4",
-    "answer": "Todo ok de momento",
-    "options": {},
-    "from": "5493492419497",
-    "refSerialize": "c98a37e5aa52746c9919bd73b694f922"
-  },
-  {
-    "ref": "48486171-bee2-4e5d-89f5-b88fa4ac0a2d",
-    "keyword": null,
-    "answer": "Muchas gracias por el comentario.",
-    "options": {
-      "media": null,
-      "buttons": [],
-      "capture": false,
-      "delay": 0
-    },
-    "from": "5493492419497",
-    "refSerialize": "8cada081f7895c6be927b0941c4c1130"
-  },
-  {
-    "ref": "1d21e2cb-6781-488d-a50b-d409a998e436",
-    "keyword": "c98a37e5aa52746c9919bd73b694f922",
+    "ref": "6edda4c5-aadf-45de-a1e1-40e4f11c25b6",
+    "keyword": "23adf8440c0917a69d2ca4a8fc6115b1",
     "answer": "Planilla",
     "options": {},
     "from": "5493492419497",
     "refSerialize": "47a00f8118176093b2f5b317242af6f1"
   },
   {
-    "ref": "ans_4d8b8b8f-66a2-4ce9-a7df-9beb37f85e6e",
-    "keyword": "key_246da6f2-6e4b-4e5c-8b09-a8319dd13e50",
+    "ref": "ans_f255634b-9109-44f1-a038-5f292818281c",
+    "keyword": "key_f697627b-b33b-4f75-b9cb-6ee20e056558",
     "answer": "Aquí tienes la información de la planilla de viáticos:",
     "options": {
       "media": null,
@@ -364,12 +23,12 @@
       "keyword": {},
       "callback": false
     },
-    "refSerialize": "bd1569c7d0183ee20d0bd6d2149400d3",
+    "refSerialize": "f525f366ba5f81a13f8da78c4f31e68c",
     "from": "5493492419497"
   },
   {
-    "ref": "ans_d9eaa142-286f-41b8-ae45-ddbc50bcfd68",
-    "keyword": "ans_4d8b8b8f-66a2-4ce9-a7df-9beb37f85e6e",
+    "ref": "ans_fd006ed9-bac6-4623-a6e8-e7b7f9aa12ce",
+    "keyword": "ans_f255634b-9109-44f1-a038-5f292818281c",
     "answer": "__call_action__",
     "options": {
       "media": null,
@@ -383,13 +42,13 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "2b069b1d0ea469ecd26694501b3e4a0d",
+    "refSerialize": "405cc0c53c6f197d6373ab8aa226b796",
     "from": "5493492419497"
   },
   {
-    "ref": "ec091fdb-7e9f-41f4-ae91-74808ef2b9cd",
+    "ref": "5ad3cd1a-c5a8-4cef-aa69-398e18400186",
     "keyword": null,
-    "answer": "Resumen de tu planilla:\n\n*Fecha:* 06/12/2024\n*Contacto:* 5493492419497\n*Colaborador:* Agustín\n*Tramo:* Rafaela, Santa Fe a Córdoba, Córdoba\n*Secciones:* Peajes\n*Observacion:* Todo ok de momento\n",
+    "answer": "Planilla cerrada, no tienes datos para ver.",
     "options": {
       "media": null,
       "buttons": [],
@@ -397,12 +56,47 @@
       "delay": 0
     },
     "from": "5493492419497",
-    "refSerialize": "b3c5ddac0ecbd9d31e41bf2a0e15f36f"
+    "refSerialize": "357df314dfcde5af7fc76d40abf0949b"
   },
   {
-    "ref": "c31e6f86-4007-41ba-a82b-78126d10e379",
+    "ref": "d2018a87-d8ab-4327-8cfe-838974286ce0",
+    "keyword": "405cc0c53c6f197d6373ab8aa226b796",
+    "answer": "Abrir",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "706b7e6740b9e96ed8269d909578e451"
+  },
+  {
+    "ref": "ans_e9ea3480-375f-4118-8c02-1b972d1a565a",
+    "keyword": "key_0ffc23fe-ea52-42e3-9546-7e1d376fc036",
+    "answer": "¿Podrías compartirme la fecha con el siguiente formato: 06/12/2024?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "487a5f5c28a583a9632220bc92ae343e",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "2679e529-c93a-4afe-b20e-78f25581af11",
+    "keyword": "487a5f5c28a583a9632220bc92ae343e",
+    "answer": "06/12/2024",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "d317ece4ac35809d81c77bed81b0a844"
+  },
+  {
+    "ref": "10e891f4-ea00-4b6f-9a3d-1affb025828f",
     "keyword": null,
-    "answer": "Resumen comprobantes cargados:\n\n*Comprobante 1*\nnombre: FRANQUICIA RAFAELA,\ncuit: 20324110489,\ntotal: 7145.64\n\n*Comprobante 2*\nnombre: E Informáticos,\ncuit: 2071546302-0,\ntotal: 7300\n\n*Comprobante 3*\nnombre: E Informáticos,\ncuit: 09492578160-15671737,\ntotal: 7300\n\n",
+    "answer": "Muchas gracias.",
     "options": {
       "media": null,
       "buttons": [],
@@ -410,19 +104,251 @@
       "delay": 0
     },
     "from": "5493492419497",
-    "refSerialize": "891549317b11ff9caa61728226300072"
+    "refSerialize": "a67d5b197321232583add9b759e19c20"
   },
   {
-    "ref": "915f5e4b-16de-4d03-9ce4-ec9ecfb8128a",
-    "keyword": "2b069b1d0ea469ecd26694501b3e4a0d",
+    "ref": "ans_6ed04795-47c9-42d4-84ef-4e9da36ec661",
+    "keyword": "ans_e9ea3480-375f-4118-8c02-1b972d1a565a",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "013ba2559893b56ab4cbb7aa53d1f21f",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "b9b64e29-dac1-4811-91e8-1cff59a3a503",
+    "keyword": null,
+    "answer": "Agustín",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "b22f217637a7d8196f85f1a330f9bfc6"
+  },
+  {
+    "ref": "dd749933-d65d-4678-a065-1a00e5aabdd6",
+    "keyword": null,
+    "answer": "👋 Bienvenido 📝 planilla abierta",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "fe4fa924b75742e7a00c46c7b1fe4326"
+  },
+  {
+    "ref": "3e8b5a2e-bdef-45c7-88c0-3aa674d8825c",
+    "keyword": "013ba2559893b56ab4cbb7aa53d1f21f",
+    "answer": "Tramo",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "85046c5da8bfbf92c558abdc381e6b2c"
+  },
+  {
+    "ref": "ans_d9f167a9-0a5b-4c44-8afc-5ec0820a57a3",
+    "keyword": "key_8de65f39-4222-48c8-8c99-04957cc60c3f",
+    "answer": "Por favor, ingresa el tramo del viaje en el siguiente formato: Ej: Rafaela, Santa Fe a Córdoba, Córdoba",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "09e02037c0df7eae30baaa87440b8934",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "efc3423c-4699-4b1a-aac1-0c96d752d257",
+    "keyword": "09e02037c0df7eae30baaa87440b8934",
+    "answer": "Rafaela, Santa Fe a Córdoba, Córdoba",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "1b889c99748c20c50f7dbfc06b4cc12c"
+  },
+  {
+    "ref": "45c5b229-e0e2-4e32-91c6-f9b1f26770ed",
+    "keyword": null,
+    "answer": "Muchas gracias, que tengas un buen viaje.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "03b4cb219debd6dab50a6993a14aa760"
+  },
+  {
+    "ref": "4bc750df-e96b-43fa-9f65-b6b82edf1258",
+    "keyword": "1b889c99748c20c50f7dbfc06b4cc12c",
+    "answer": "Peajes",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "b809ac4f93aebb043dd5de628db1d807"
+  },
+  {
+    "ref": "ans_f3a6d5af-7d7b-4bc9-a27d-4061ae4e913c",
+    "keyword": "key_8d504fe8-dabc-4c35-a3c3-1420b0eb77c6",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "b8688479a9065dfad873ca9ee0716eef",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "ans_5efb65e0-0faf-40df-9ac1-96c369eed0f5",
+    "keyword": "ans_f3a6d5af-7d7b-4bc9-a27d-4061ae4e913c",
+    "answer": "Por favor, carga el comprobante desde tu galería, adjúntalo como documento o toma una foto para continuar.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "b7812a6aeab15d4e02566e016f50492a",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "1dba8609-47aa-4818-9d68-b7ec0187535c",
+    "keyword": "b7812a6aeab15d4e02566e016f50492a",
+    "answer": "_event_media__5daa618f-e780-41a7-8c29-245393e0ea55",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "a4cce519e4719666429188b7d88b9c60"
+  },
+  {
+    "ref": "a668eec0-af7c-44d7-9f61-985e374bc981",
+    "keyword": null,
+    "answer": "Tu archivo se ha guardado correctamente.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "4aeeddb1792753ab8ee59bacb39d30a2"
+  },
+  {
+    "ref": "e93fd4e8-8f13-47e3-a62d-e03c0feae6d8",
+    "keyword": "a4cce519e4719666429188b7d88b9c60",
+    "answer": "Planilla",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "47a00f8118176093b2f5b317242af6f1"
+  },
+  {
+    "ref": "ans_f255634b-9109-44f1-a038-5f292818281c",
+    "keyword": "key_f697627b-b33b-4f75-b9cb-6ee20e056558",
+    "answer": "Aquí tienes la información de la planilla de viáticos:",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "f525f366ba5f81a13f8da78c4f31e68c",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "ans_fd006ed9-bac6-4623-a6e8-e7b7f9aa12ce",
+    "keyword": "ans_f255634b-9109-44f1-a038-5f292818281c",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "405cc0c53c6f197d6373ab8aa226b796",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "0378d6de-b5d7-4501-9377-97f2b5757e0f",
+    "keyword": null,
+    "answer": "Planilla resumen:\n\n*Fecha:* 06/12/2024\n*Contacto:* 5493492419497\n*Colaborador:* Agustín\n*Tramo:* Rafaela, Santa Fe a Córdoba, Córdoba\n*Secciones:* Peajes\n",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "e2e5ed19de3d7bc1ca7e7ece0f993786"
+  },
+  {
+    "ref": "5aca7d15-0d22-493d-bc6a-22ac174f4b84",
+    "keyword": null,
+    "answer": "Resumen comprobantes cargados:\n\n*Comprobante 1*\nnombre: FRANQUICIA RAFAELA,\ncuit: 20324110489,\ntotal: 7145.64\n\n*Comprobante 2*\nnombre: E Informáticos,\ncuit: 2071546302-0,\ntotal: 7300\n\n*Comprobante 3*\nnombre: NUEVA MUTUAL DE PARA,\nCUIT: 20-69366790-5,\ntotal: 11.850,00\n\n*Comprobante 4*\nnombre: E Informáticos,\ncuit: 09492578160-15671737,\ntotal: 7300\n\n*Comprobante 5*\nnombre: E Negi,\ncuit: 09492578160-15671737,\ntotal: 7300\n\n",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "790f385dd148ffce0f1aafdc74ebc62c"
+  },
+  {
+    "ref": "ce4497c2-cc75-4f68-91b1-0d7e32901dc8",
+    "keyword": "405cc0c53c6f197d6373ab8aa226b796",
     "answer": "Cerrar",
     "options": {},
     "from": "5493492419497",
     "refSerialize": "f2d723c5b9ee5ba370a21f18310a5a0e"
   },
   {
-    "ref": "ans_1ba45604-044c-4324-b4f6-3a727a48ed63",
-    "keyword": "key_fcbb8778-c927-4f93-a5f1-7650e0bdc584",
+    "ref": "ans_131a6e59-92cc-40c7-8fee-64f72d6eb7b7",
+    "keyword": "key_7846390f-dfa6-489f-8d05-80688a3e9729",
     "answer": "¿Cierro la planilla de viáticos? Confirmame con un sí o no",
     "options": {
       "media": null,
@@ -436,20 +362,20 @@
       "keyword": {},
       "callback": false
     },
-    "refSerialize": "0f23bf84186460bbbcac233d649018da",
+    "refSerialize": "bcc38ef45d1b8d12b6679e000e7c6822",
     "from": "5493492419497"
   },
   {
-    "ref": "22bdb0a6-d209-4d37-8ece-77f3fc5887b6",
-    "keyword": "0f23bf84186460bbbcac233d649018da",
+    "ref": "a1641147-88fb-4b5d-8dea-26414131575e",
+    "keyword": "bcc38ef45d1b8d12b6679e000e7c6822",
     "answer": "Si",
     "options": {},
     "from": "5493492419497",
     "refSerialize": "611b2bffc5c8bf7a02f45d2060b32e20"
   },
   {
-    "ref": "ans_bfde6adc-7f9b-4616-90dc-07c67b758574",
-    "keyword": "ans_1ba45604-044c-4324-b4f6-3a727a48ed63",
+    "ref": "ans_a06fdf57-0667-4415-ba5a-dbc1b5ce5a09",
+    "keyword": "ans_131a6e59-92cc-40c7-8fee-64f72d6eb7b7",
     "answer": "__call_action__",
     "options": {
       "media": null,
@@ -463,13 +389,13 @@
       "keyword": {},
       "callback": true
     },
-    "refSerialize": "d086cbbb7748d61c1aa4344573515265",
+    "refSerialize": "35d1fc83f4a480c3f0fa04bbaef5b5d8",
     "from": "5493492419497"
   },
   {
-    "ref": "5fbc8c06-cd02-42ab-b76d-b7ab07e68639",
+    "ref": "3b5ad2e2-14e7-4f8c-aa53-442a971644a3",
     "keyword": null,
-    "answer": "Resumen de tu planilla:\n\n*Fecha:* 06/12/2024\n*Contacto:* 5493492419497\n*Colaborador:* Agustín\n*Tramo:* Rafaela, Santa Fe a Córdoba, Córdoba\n*Secciones:* Peajes\n*Observacion:* Todo ok de momento\n",
+    "answer": "Resumen de tu planilla:\n\n*Fecha:* 06/12/2024\n*Contacto:* 5493492419497\n*Colaborador:* Agustín\n*Tramo:* Rafaela, Santa Fe a Córdoba, Córdoba\n*Secciones:* Peajes\n",
     "options": {
       "media": null,
       "buttons": [],
@@ -477,10 +403,10 @@
       "delay": 0
     },
     "from": "5493492419497",
-    "refSerialize": "b3c5ddac0ecbd9d31e41bf2a0e15f36f"
+    "refSerialize": "c43940ceab5eaa0690182b5de8b5de93"
   },
   {
-    "ref": "48fd671a-57ee-4da8-a255-c3024fa72f39",
+    "ref": "37d22eee-9691-4cc9-9869-47f3182db386",
     "keyword": null,
     "answer": "Planilla cerrada correctamente.",
     "options": {
@@ -491,5 +417,64 @@
     },
     "from": "5493492419497",
     "refSerialize": "354fd25aab02e3500e7ba6de89fdd0e4"
+  },
+  {
+    "ref": "d3c1b7a8-9860-4161-835f-c027f009defc",
+    "keyword": "35d1fc83f4a480c3f0fa04bbaef5b5d8",
+    "answer": "Planilla",
+    "options": {},
+    "from": "5493492419497",
+    "refSerialize": "47a00f8118176093b2f5b317242af6f1"
+  },
+  {
+    "ref": "ans_f255634b-9109-44f1-a038-5f292818281c",
+    "keyword": "key_f697627b-b33b-4f75-b9cb-6ee20e056558",
+    "answer": "Aquí tienes la información de la planilla de viáticos:",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "f525f366ba5f81a13f8da78c4f31e68c",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "ans_fd006ed9-bac6-4623-a6e8-e7b7f9aa12ce",
+    "keyword": "ans_f255634b-9109-44f1-a038-5f292818281c",
+    "answer": "__call_action__",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "child": null,
+      "delay": 0,
+      "idle": null,
+      "ref": null,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "405cc0c53c6f197d6373ab8aa226b796",
+    "from": "5493492419497"
+  },
+  {
+    "ref": "a417f5ea-5979-41dc-9e3e-0885b04a63e4",
+    "keyword": null,
+    "answer": "Planilla cerrada, no tienes datos para ver.",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "5493492419497",
+    "refSerialize": "357df314dfcde5af7fc76d40abf0949b"
   }
 ]
