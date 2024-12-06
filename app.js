@@ -384,9 +384,18 @@ const flowCerrar = addKeyword(['cerrar', 'CERRAR'])
    })
    .addAction(async (ctx, { flowDynamic, state }) => {
       if (ctx.body.trim().toLowerCase() === 'si') {
-         console.log(ctx.body);
-
          const userState = await state.getMyState();
+
+         let stateResponseMessage = 'Resumen de tu planilla:\n\n';
+         for (const [key, value] of Object.entries(userState)) {
+            if (key !== 'validado' && key !== 'nomSecc') {
+               const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+               stateResponseMessage += `*${formattedKey}:* ${value}\n`;
+            }
+         }
+
+         // Envía el resumen al usuario
+         await flowDynamic(stateResponseMessage);
 
          const params = {
             phone: userState.contacto,
@@ -424,13 +433,25 @@ const flowCerrar = addKeyword(['cerrar', 'CERRAR'])
 
 //FLOW PLANTILLA
 const flowPlanilla = addKeyword(['planilla', 'PLANILLA'])
-   .addAnswer(
-      'Estoy trabajando en tu solicitud. Por favor, espere un momento mientras completo el proceso.'
-   )
    .addAnswer('Aquí tienes la información de la planilla de viáticos:')
-   .addAction(async (ctx, { flowDynamic }) => {
+
+   .addAction(async (ctx, { flowDynamic, state }) => {
       const contacto = ctx.from;
       const opc = ctx.body.toUpperCase();
+
+      const userState = await state.getMyState();
+
+      let stateResponseMessage = 'Resumen de tu planilla:\n\n';
+      for (const [key, value] of Object.entries(userState)) {
+         if (key !== 'validado' && key !== 'nomSecc') {
+            const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+            stateResponseMessage += `*${formattedKey}:* ${value}\n`;
+         }
+      }
+
+      // Envía el resumen al usuario
+      await flowDynamic(stateResponseMessage);
+
       try {
          const params = {
             phone: contacto,
@@ -447,7 +468,7 @@ const flowPlanilla = addKeyword(['planilla', 'PLANILLA'])
 
          // Formatear los datos en un mensaje para el usuario
          if (response.data.length > 0) {
-            let responseMessage = 'Resumen de la planilla de viáticos:\n\n';
+            let responseMessage = 'Resumen comprobantes cargados:\n\n';
 
             response.data.forEach((item, index) => {
                responseMessage += `*Comprobante ${index + 1}*\n`;
