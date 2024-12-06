@@ -302,12 +302,15 @@ const flowNombreSeccion = addKeyword([
          await state.update({ secciones: seccionesGuardadas });
       }
       console.log('Secciones guardadas:', seccionesGuardadas);
+
+      const nomSecc = seccionNueva;
+      await state.update({ nomSecc });
    })
    .addAnswer(
       'Por favor, carga el comprobante desde tu galería, adjúntalo como documento o toma una foto para continuar.',
       { capture: true },
       async (ctx, { flowDynamic, provider, state }) => {
-         const { contacto } = await state.getMyState();
+         const { contacto, nomSecc } = await state.getMyState();
          console.log(contacto);
          try {
             const imageMessage = ctx.message?.imageMessage;
@@ -342,7 +345,7 @@ const flowNombreSeccion = addKeyword([
                ? imageMessage.mimetype
                : documentMessage.mimetype;
             const extension = mimetype.split('/')[1]; // Obtener la extensión
-            const fileName = `file_${contacto}_${Date.now()}.${extension}`;
+            const fileName = `secc_${nomSecc}_${contacto}_${Date.now()}.${extension}`;
             const filePath = path.join(__dirname, 'comprobantes', fileName);
             fs.writeFileSync(filePath, buffer);
 
@@ -376,57 +379,100 @@ const flowObservaciones = addKeyword([
 
 //FLOW CERRAR
 const flowCerrar = addKeyword(['cerrar', 'CERRAR'])
-   .addAnswer('Cerrando planilla de viaticos')
-   .addAction(async (ctx, { state }) => {
-      const userState = await state.getMyState();
+   .addAnswer('¿Cierro la planilla de viáticos? Confirmame con un sí o no', {
+      capture: true,
+   })
+   .addAction(async (ctx, { flowDynamic, state }) => {
+      if (ctx.body.trim().toLowerCase() === 'si') {
+         console.log(ctx.body);
 
-      const params = {
-         phone: userState.contacto,
-         data: JSON.stringify(userState),
-         opc: 'CERRAR',
-      };
+         const userState = await state.getMyState();
 
+         const params = {
+            phone: userState.contacto,
+            data: JSON.stringify(userState),
+            opc: 'CERRAR',
+         };
+
+         try {
+            const response = await axios.post(
+               'https://www.itdepsis.com.ar/7d156b/pm/getiavia.htm',
+               null,
+               { params }
+            );
+
+            console.log(response.data, 'data');
+
+            if (response.status === 200) {
+               console.log('Respuesta exitosa:', response.data);
+
+               // Limpiar el estado después de una respuesta exitosa
+               await state.clear(ctx.from);
+               console.log('Estado limpiado correctamente.');
+               return await flowDynamic('Planilla cerrada correctamente.');
+            } else {
+               console.log('Error en la respuesta:', response.status);
+            }
+         } catch (error) {
+            console.error('Error al llamar a la API:', error.message);
+         }
+      } else {
+         console.log('Ok, puedes cerrarlo más tarde.');
+         return await flowDynamic('Ok, puedes cerrarlo más tarde.');
+      }
+   });
+
+//FLOW PLANTILLA
+const flowPlanilla = addKeyword(['planilla', 'PLANILLA'])
+   .addAnswer(
+      'Estoy trabajando en tu solicitud. Por favor, espere un momento mientras completo el proceso.'
+   )
+   .addAnswer('Aquí tienes la información de la planilla de viáticos:')
+   .addAction(async (ctx, { flowDynamic }) => {
+      const contacto = ctx.from;
+      const opc = ctx.body.toUpperCase();
       try {
+         const params = {
+            phone: contacto,
+            opc,
+         };
+
          const response = await axios.post(
             'https://www.itdepsis.com.ar/7d156b/pm/getiavia.htm',
             null,
             { params }
          );
 
-         console.log(response.data, 'data');
+         console.log('Datos recibidos:', response.data);
 
-         if (response.status === 200) {
-            console.log('Respuesta exitosa:', response.data);
+         // Formatear los datos en un mensaje para el usuario
+         if (response.data.length > 0) {
+            let responseMessage = 'Resumen de la planilla de viáticos:\n\n';
+
+            response.data.forEach((item, index) => {
+               responseMessage += `*Comprobante ${index + 1}*\n`;
+               responseMessage += `${item.o_nom.replace(/['"]+/g, '')}\n`;
+               responseMessage += `${item.o_cui.replace(/['"]+/g, '')}\n`;
+               responseMessage += `${item.o_tot.replace(/['"]+/g, '')}\n`;
+               responseMessage += '\n';
+            });
+
+            await flowDynamic(responseMessage);
          } else {
-            console.log('Error en la respuesta:', response.status);
+            await flowDynamic(
+               'No se encontraron registros en la planilla de viáticos.'
+            );
          }
       } catch (error) {
-         console.error('Error al llamar a la API:', error.message);
+         console.error(
+            'Error al obtener los datos de la planilla:',
+            error.message
+         );
+         await flowDynamic(
+            'Hubo un problema al obtener los datos de tu planilla. Por favor, intenta nuevamente más tarde.'
+         );
       }
    });
-
-//FLOW PLANTILLA
-const flowPlanilla = addKeyword(['planilla', 'PLANILLA']).addAnswer(
-   'Aquí tienes la información de la planilla de viáticos:',
-   null,
-   async (ctx, { flowDynamic, state }) => {
-      // Obtiene todo el estado almacenado para el usuario actual
-      const userState = await state.getMyState();
-
-      // Formatea la información del estado para presentarla al usuario
-      let responseMessage = 'Resumen de tus respuestas:\n\n';
-      for (const [key, value] of Object.entries(userState)) {
-         responseMessage += `*${key}:* ${value}\n`;
-      }
-
-      // Envía el resumen al usuario
-      await flowDynamic(responseMessage);
-
-      // Marca que la planilla ha sido solicitada
-      await state.update({ planillaSolicitada: true });
-      console.log('Planilla solicitada por:', ctx.from);
-   }
-);
 
 // Configuraciones del bot
 
